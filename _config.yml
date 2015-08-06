@@ -5,6 +5,7 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
+source:              ./app
 title:               Deep-Fried Mind
 tagline:             '– The blog'
 description:         'Hey there. I''m a web developer (mainly front-end) and this is where I write about such topics – except for when I stray completely and write about other nonsense.'
