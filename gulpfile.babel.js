@@ -24,17 +24,17 @@ const separator = $.util.colors.black.bold('‧‧‧‧‧‧‧‧‧‧‧‧
 const config = {
     dev:  $.util.env.dev,
     src:  {
-        jekyll:  ['_config.yml', './app/*.{md,xml}', './app/{index,404}.html', './app/{_includes,_layouts,_posts}/*.*'],
+        jekyll:  ['_config.yml', '*.{md,xml}', '{index,404}.html', '{_includes,_layouts,_posts}/*.*', '!_site'],
         scripts: {
-            main: './src/scripts/main.js',
-            all:  './src/scripts/**/*.js',
+            main: './_src/scripts/main.js',
+            all:  './_src/scripts/**/*.js',
         },
         styles:  {
-            main: './src/styles/main.scss',
-            all:  './src/styles/**/*.scss',
+            main: './_src/styles/main.scss',
+            all:  './_src/styles/**/*.scss',
         },
     },
-    dest: 'app/public',
+    dest: 'public',
 };
 
 
@@ -109,7 +109,7 @@ gulp.task('styles:compile', () => {
             .on('error', $.sass.logError))
         .pipe($.autoprefixer(autoprefixerBrowsers))
         .pipe($.if(config.dev, $.sourcemaps.write()))
-        .pipe($.if(config.dev, gulp.dest('_site/public/css'))) // during development, output the css directly to the '_site' folder so there's no need for a Jekyll build
+        .pipe($.if(config.dev, gulp.dest('_site/public/css'))) // during development, also output the css directly to the '_site' folder so there's no need for a Jekyll build
         .pipe($.if(config.dev, reload({stream: true})))
         .pipe($.if(!config.dev, $.csso()))
         .pipe(gulp.dest(config.dest + '/css'));
@@ -143,11 +143,11 @@ gulp.task('jekyll', function(cb) {
 
 // --------------------------------------------------------------------------------------------------------------------
 //
-// Browsersync
+// Browsersync server + watch tasks
 //
 // --------------------------------------------------------------------------------------------------------------------
 
-gulp.task('browser-sync', function() {
+gulp.task('serve', function() {
     browserSync({
         open:   !$.util.env.noopen, // don't open a new browser window if run with `gulp --noopen`
         server: {
@@ -175,10 +175,9 @@ gulp.task('default', () => {
             'jekyll',
             'styles',
         ],
-        'browser-sync',
         () => {
-            //if (config.dev) {
-            //    gulp.start('serve');
-            //}
+            if (config.dev) {
+                gulp.start('serve');
+            }
         });
 });
