@@ -18,7 +18,7 @@ exclude:
 # Setup
 title:               Deep-Fried Mind
 tagline:             'The blog'
-description:         'Hey there.<br>My name is Andreas Wahlqvist and I''m a web developer (mainly of the front-end variety) and a general tech enthusiast. This is where I write about such topics – except for when I stray completely and rant about other nonsense.'
+description:         'Hey there.<br>My name is Andreas Wahlqvist and I''m a web developer (mainly of the front-end variety) as well as a general tech enthusiast. This is where I write about such topics <small><em>(except for when I stray completely and rant about other nonsense)</em></small>.'
 url:                 http://blog.deepfriedmind.com
 baseurl:             ''
 paginate:            5
