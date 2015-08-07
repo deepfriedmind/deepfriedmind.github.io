@@ -57,6 +57,16 @@ a:focus {
     margin:        0;
 }
 
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.svg-icon {
+    fill:           $color-sidebar-icons;
+    margin-right:   5px;
+    vertical-align: middle;
+}
+
 
 // ****************************************************************************
 //  Color theme

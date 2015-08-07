@@ -1,38 +1,50 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
+         styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 <!-- Toggleable sidebar -->
 <aside class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
-  </div>
+    <div class="sidebar-item">
+        <p>{{ site.description }}</p>
+    </div>
 
-  <nav class="sidebar-nav" role="navigation">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+    <nav class="sidebar-nav" role="navigation">
+        <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 
-    {% comment %}
-      The code below dynamically generates a sidebar nav of pages with
-      `layout: page` in the front-matter. See readme for usage.
-    {% endcomment %}
+        {% comment %}
+            The code below dynamically generates a sidebar nav of pages with
+            `layout: page` in the front-matter. See readme for usage.
+        {% endcomment %}
 
-    {% assign pages_list = site.pages | sort:"url" %}
-    {% for node in pages_list %}
-      {% if node.title != null %}
-        {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+        {% assign pages_list = site.pages | sort:"url" %}
+        {% for node in pages_list %}
+            {% if node.title != null %}
+                {% if node.layout == "page" %}
+                    <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.author.url }}">My personal site</a>
-    <a class="sidebar-nav-item" href="https://twitter.com/{{ site.author.twitter }}"><strong>@{{ site.author.twitter }}</strong> on Twitter</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}"><small>View site source on GitHub</small></a>
-  </nav>
+        <a class="sidebar-nav-item" href="{{ site.author.url }}">My personal site</a>
+        <a class="sidebar-nav-item" href="https://twitter.com/{{ site.author.twitter }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" class="svg-icon icon-twitter">
+            <path d="M28 5.316c-1.03.457-2.137.766-3.3.905 1.187-.71 2.098-1.832 2.527-3.173-1.11.658-2.34 1.136-3.648 1.394-1.05-1.116-2.546-1.814-4.198-1.814-3.173 0-5.745 2.572-5.745 5.744 0 .45.05.89.15 1.31C9.014 9.44 4.78 7.15 1.95 3.674c-.496.848-.78 1.835-.78 2.888 0 1.993 1.015 3.75 2.557 4.78-.942-.03-1.827-.287-2.602-.718v.072c0 2.783 1.98 5.105 4.608 5.633-.482.13-.99.2-1.513.2-.37 0-.73-.036-1.08-.103.73 2.282 2.854 3.943 5.367 3.99-1.966 1.54-4.443 2.458-7.134 2.458-.464 0-.92-.027-1.37-.08 2.542 1.63 5.562 2.58 8.806 2.58 10.562 0 16.34-8.752 16.34-16.344 0-.246-.006-.494-.017-.74 1.12-.81 2.095-1.82 2.865-2.972z"/>
+          </svg>
+          <small>
+            <strong>@{{ site.author.twitter }}</strong> on Twitter
+          </small>
+        </a>
+        <a class="sidebar-nav-item" href="{{ site.github.repo }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" class="svg-icon icon-github">
+            <path d="M14 .346c-7.73 0-14 6.268-14 14C0 20.532 4.01 25.78 9.575 27.63c.7.13.956-.302.956-.673 0-.332-.01-1.213-.01-2.38-3.9.845-4.72-1.877-4.72-1.877-.63-1.62-1.55-2.05-1.55-2.05-1.27-.87.1-.85.1-.85 1.407.096 2.146 1.44 2.146 1.44 1.25 2.14 3.28 1.522 4.076 1.163.128-.905.49-1.522.89-1.872-3.11-.35-6.377-1.55-6.377-6.92 0-1.52.545-2.77 1.44-3.75-.142-.35-.623-1.77.14-3.7 0 0 1.174-.37 3.85 1.44 1.116-.31 2.313-.464 3.504-.47 1.19.006 2.39.16 3.506.47 2.67-1.81 3.845-1.433 3.845-1.433.763 1.93.28 3.35.14 3.707.895.98 1.437 2.23 1.437 3.758 0 5.38-3.272 6.563-6.39 6.91.5.433.95 1.29.95 2.594 0 1.87-.02 3.38-.02 3.84 0 .375.254.81.965.674 5.55-1.857 9.56-7.1 9.56-13.284 0-7.735-6.27-14-14-14z"/>
+          </svg>
+          <small>View site source on GitHub</small>
+        </a>
+    </nav>
 
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
-    </p>
-  </div>
+    <div class="sidebar-item">
+        <p>
+            &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+        </p>
+    </div>
 </aside>
