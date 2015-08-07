@@ -51,15 +51,10 @@ a:focus {
     text-decoration: none;
 }
 
-img {
-    display: inline;
-    margin: 0;
-}
-
-pre {
-    background-color: $color-code-bg;
-    border-radius:    2px;
-    box-shadow:       inset -4px 4px 4px rgba(0, 0, 0, .8);
+.emoji {
+    border-radius: 0;
+    display:       inline;
+    margin:        0;
 }
 
 
