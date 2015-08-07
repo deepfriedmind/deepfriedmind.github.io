@@ -35,6 +35,10 @@ version:             1.0.0
 github:
   repo:              https://github.com/deepfriedmind/deepfriedmind.github.io
 
+# Disqus
+disqus:
+  shortname:         deepfriedmind
+
 # Plugins
 gems:
   - jekyll-sitemap

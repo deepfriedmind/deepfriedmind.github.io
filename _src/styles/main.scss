@@ -14,6 +14,7 @@
 //  Core
 // ****************************************************************************
 @import 'core/variables';
+@import 'core/helpers';
 @import 'core/typography';
 
 // ****************************************************************************
@@ -44,11 +45,16 @@ h4,
     color: $color-gray;
 }
 
-a:hover,
-a:focus {
-    border-bottom:   1px dotted $color-primary;
-    margin-bottom:   -1px;
-    text-decoration: none;
+a {
+    @extend %transition-out;
+    border-bottom: 1px dotted transparentize($color-primary, 1);
+
+    &:hover,
+    &:focus {
+        @extend %transition-in;
+        border-bottom:   1px dotted $color-primary;
+        text-decoration: none;
+    }
 }
 
 .emoji {

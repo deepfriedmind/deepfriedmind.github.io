@@ -5,6 +5,18 @@
 // ********************************************************************************************************************
 
 // ****************************************************************************
+//  Fonts
+// ****************************************************************************
+
+$font-family-headline:  Lato, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$font-family-paragraph: 'PT Serif', Georgia, 'Times New Roman', serif;
+$font-family-code:      'Source Code Pro', Menlo, Monaco, 'Courier New', monospace;
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-bold:      700;
+
+
+// ****************************************************************************
 //  Colors
 // ****************************************************************************
 
@@ -17,13 +29,13 @@ $color-code-linenos:  lighten($color-code-bg, 15%);
 $color-sidebar-icons: #252525;
 
 
-// ****************************************************************************
-//  Fonts
-// ****************************************************************************
+// ********************************************************************************************************************
+//
+//  Transitions
+//
+// ********************************************************************************************************************
 
-$font-family-headline:  Lato, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-$font-family-paragraph: 'PT Serif', Georgia, 'Times New Roman', serif;
-$font-family-code:      'Source Code Pro', Menlo, Monaco, 'Courier New', monospace;
-$font-weight-light:     300;
-$font-weight-normal:    400;
-$font-weight-bold:      700;
+$transition-in-duration:  180ms;
+$transition-out-duration: 250ms;
+$transition-in-easing:    ease;
+$transition-out-easing:   ease-in;
