@@ -11,10 +11,6 @@ linters:
   PlaceholderInExtend:
     enabled: false
 
-  PropertyUnits:
-    properties:
-      line-height: [] # No units allowed
-
   QualifyingElement:
     enabled: false
 
