@@ -12,7 +12,9 @@
             "posts_path": "./_posts",
             "drafts_path": "./_drafts",
             "default_post_layout": "post",
-            "default_post_published": null
+            "default_post_published": null,
+            "default_post_categories": null,
+            "default_post_tags": null
         }
     },
     "syntax_override": {

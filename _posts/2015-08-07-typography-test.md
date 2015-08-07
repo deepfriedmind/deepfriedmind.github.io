@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Typography test
-categories: [typography]
-tags: []
-
 ---
 
 ## Heading 2

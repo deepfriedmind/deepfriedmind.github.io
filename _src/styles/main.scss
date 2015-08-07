@@ -11,10 +11,10 @@
 @import 'lanyon/lanyon';
 
 // ****************************************************************************
-//  Base
+//  Core
 // ****************************************************************************
-@import 'base/variables';
-@import 'base/typography';
+@import 'core/variables';
+@import 'core/typography';
 
 // ****************************************************************************
 //  Components
@@ -33,15 +33,38 @@
     -webkit-font-smoothing:  antialiased;
 }
 
+h1,
+%h1,
+h2,
+%h2,
+h3,
+%h3,
+h4,
+%h4 {
+    color: $color-gray;
+}
+
 a:hover,
 a:focus {
     border-bottom:   1px dotted $color-primary;
-    margin-bottom: -1px;
+    margin-bottom:   -1px;
     text-decoration: none;
 }
 
+img {
+    display: inline;
+    margin: 0;
+}
+
+pre {
+    background-color: $color-code-bg;
+    border-radius:    2px;
+    box-shadow:       inset -4px 4px 4px rgba(0, 0, 0, .8);
+}
+
+
 // ****************************************************************************
-//  Theme
+//  Color theme
 // ****************************************************************************
 
 // scss-lint:disable IdSelector

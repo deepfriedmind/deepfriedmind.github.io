@@ -17,8 +17,8 @@ exclude:
 
 # Setup
 title:               Deep-Fried Mind
-tagline:             '– The blog'
-description:         'Hey there. I''m a web developer (mainly front-end) and this is where I write about such topics – except for when I stray completely and write about other nonsense.'
+tagline:             'The blog'
+description:         'Hey there.<br>My name is Andreas Wahlqvist and I''m a web developer (mainly of the front-end variety) and a general tech enthusiast. This is where I write about such topics – except for when I stray completely and rant about other nonsense.'
 url:                 http://blog.deepfriedmind.com
 baseurl:             ''
 paginate:            5
@@ -26,11 +26,14 @@ paginate:            5
 # About/contact
 author:
   name:              Andreas Wahlqvist
-  url:               https://twitter.com/deepfriedmind
+  url:               http://deepfriedmind.com
+  twitter:           deepfriedmind
   email:             andreas@deepfriedmind.com
 
 # Custom vars
 version:             1.0.0
+github:
+  repo:              https://github.com/deepfriedmind/deepfriedmind.github.io
 
 # Plugins
 gems:

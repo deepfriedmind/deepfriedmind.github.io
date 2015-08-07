@@ -64,8 +64,11 @@ h5,
     font-weight: $font-weight-bold;
 }
 
+p {
+    hyphens: auto;
+}
+
 pre {
-    background-color: $color-code-bg;
     font-size:        .7rem;
     line-height:      1rem;
 }
