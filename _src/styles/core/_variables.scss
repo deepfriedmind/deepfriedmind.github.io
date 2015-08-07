@@ -8,11 +8,12 @@
 //  Colors
 // ****************************************************************************
 
-$color-primary:   #53778a;
-$color-black:     #515151;
-$color-trueblack: #000;
-$color-gray:      #6b6a71;
-$color-code-bg:   #202531;
+$color-primary:      #53778a;
+$color-black:        #515151;
+$color-trueblack:    #000;
+$color-gray:         #6b6a71;
+$color-code-bg:      #202531;
+$color-code-linenos: lighten($color-code-bg, 15%);
 
 
 // ****************************************************************************
