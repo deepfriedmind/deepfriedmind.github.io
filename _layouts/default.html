@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body class="theme-dfm">
+<body class="theme-dfm">
 
-    {% include sidebar.html %}
+{% include sidebar.html %}
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
+<!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+     content to avoid any CSS collisions with our real content. -->
+<div class="wrap">
+    <div class="masthead">
         <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
+            <h3 class="masthead-title">
+                <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+                <small>{{ site.tagline }}</small>
+            </h3>
         </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
     </div>
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <div class="container content">
+        {{ content }}
+    </div>
+</div>
 
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+<script>
+    (function(document) {
+        var toggle   = document.querySelector('.sidebar-toggle');
+        var sidebar  = document.querySelector('#sidebar');
         var checkbox = document.querySelector('#sidebar-checkbox');
 
         document.addEventListener('click', function(e) {
-          e.stopPropagation();
-          var target = e.target;
+            e.stopPropagation();
+            var target = e.target;
 
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
+            if (!checkbox.checked ||
+                sidebar.contains(target) ||
+                (target === checkbox || target === toggle)) {
+                return;
+            }
 
-          checkbox.checked = false;
+            checkbox.checked = false;
         }, false);
-      })(document);
-    </script>
-  </body>
+    })(document);
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-20918296-3', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
 </html>
