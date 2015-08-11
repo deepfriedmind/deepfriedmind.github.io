@@ -1,0 +1,8 @@
+{% if page.sharing != false %}
+    <blockquote>
+        <p>If you found this post useful, why not
+            <a href="https://twitter.com/intent/tweet?url={{ site.url | cgi_escape }}{{ page.url | cgi_escape }}&text={{ page.title | cgi_escape }}&via={{ site.author.twitter | cgi_escape }}"
+               target="_blank">share it on Twitter</a>?</p>
+        <p>Also, feel free to follow <a href="https://twitter.com/{{ site.author.twitter }}">@deepfriedmind</a>.</p>
+    </blockquote>
+{% endif %}
